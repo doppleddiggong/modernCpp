@@ -39,5 +39,5 @@ int main()
 	//pPtTest->init();
 
 	BinaryTree *binaryTree = new BinaryTree();
-	binaryTree->init('A');
+	binaryTree->init();
 }
