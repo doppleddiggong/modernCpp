@@ -155,7 +155,6 @@
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithmus.cpp" />
