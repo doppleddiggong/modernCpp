@@ -4,7 +4,8 @@
 #include "pch.h"
 #include "header.h"
 
-// 	string test_message = format_string("%d %lf %s %#x\n", 10, 10.5, "test message", 12345678);
+// 문자열 포맷 출력
+// string test_message = format_string("%d %lf %s %#x\n", 10, 10.5, "test message", 12345678);
 string format_string(const std::string fmt, ...)
 {
 	int size = ((int)fmt.size()) * 2;
@@ -33,6 +34,10 @@ int main()
 {
 	printf("main\n");
 
-	PointerTest *pTest = new PointerTest();
-	pTest->init();
+	// 포인터와 레퍼런스, 주소간의 확인을 위한 테스트 코드
+	//PointerTest *pPtTest = new PointerTest();
+	//pPtTest->init();
+
+	BinaryTree *binaryTree = new BinaryTree();
+	binaryTree->init('A');
 }
