@@ -44,7 +44,7 @@ Node* BinaryTree::BST_insert(Node* root, int value)
 	}
 	else
 	{
-		if (root->value > value)
+		if (value < root->value )
 			root->leftChild = BST_insert(root->leftChild, value);
 		else
 			root->rightChild = BST_insert(root->rightChild, value);

@@ -29,7 +29,6 @@ string format_string(const std::string fmt, ...)
 	return buffer;
 }
 
-
 int main()
 {
 	printf("main\n");
@@ -38,6 +37,9 @@ int main()
 	//PointerTest *pPtTest = new PointerTest();
 	//pPtTest->init();
 
-	BinaryTree *binaryTree = new BinaryTree();
-	binaryTree->init();
+	/*BinaryTree *binaryTree = new BinaryTree();
+	binaryTree->init();*/
+
+	auto modenCpp = new mordenCpp();
+	modenCpp->init();
 }

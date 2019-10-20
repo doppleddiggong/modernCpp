@@ -154,11 +154,13 @@
     <ClInclude Include="..\..\..\..\Desktop\PointerTest.h" />
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="header.h" />
+    <ClInclude Include="mordenCpp.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithmus.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="mordenCpp.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
