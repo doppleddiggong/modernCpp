@@ -61,7 +61,7 @@ void funcModern::init()
 {
 	DLOG("");
 
-	for_each_loop();
+	lambdafunc();
 }
 
 
@@ -99,7 +99,6 @@ void funcModern::autoKeyword()
 
 void funcModern::decltypeKeyword()
 {
-
 	// decltype, 어떤 객체타입을 기반으로 다른 객체 타입을 지정할 수 있다
 	// auto 와 decltype을 조합하면 더 간단한 방식으로 템플릿 코드를 작성할수 있다
 	/*
@@ -220,6 +219,26 @@ void funcModern::std_vector()
 
 }
 
+void funcModern::std_transform()
+{
+	std::string s = "HELLO";
+	std::string v = "";
+
+	// std::tranform, 범위내의 원소들 각각에 대해 인자로 전달한 함수를 실행 한 후, 그 결과를 d_first에서부터 쭉 기록한다
+	// for_each는 원소를 수정하지 않지만, tranform은 원소를 수정한다
+	printf("[BEFORE] %s\n", s.c_str());
+
+	// v의 컨테이너 크기..
+	// 같은 컨테이너(s)의 값을 갱신해서 저장할떄,
+	//std:transform(s.begin(), s.end(), s.begin(), tolower);
+	// 다른 컨테이너(v)에 값을 갱신할때,
+	// 아래와 v.begin으로 입력시 컨테이너를 자동으로 늘려주지 않기 때문에 std::back_insterer를 사용해서 자동으로 늘려주면서 들어가게 한다
+	//std:transform(s.begin(), s.end(), v.begin(), tolower);
+	std:transform(s.begin(), s.end(), std::back_inserter(v), tolower);
+
+	printf("[after:s] %s\n", s.c_str());
+	printf("[after:v] %s\n", v.c_str());
+}
 
 void funcModern::for_each_loop()
 {
@@ -267,4 +286,18 @@ void funcModern::for_each_loop()
 	for_each(vec.begin(), vec.end(), myfunc<int>);
 	
 	//for_each(vec.begin(), vec.end(), [](const int& v) { printf("chk %d", v); });
+}
+
+void funcModern::lambdafunc()
+{
+	// 캡처목록 [] : 람다 표현식 바깥의 변수를 람다 본문에서 어떻게 접근하는지 나타낸다, 또한 람다 표현식의 시작을 나타내므로, 람다 표현식을 식별하는 용도가 있다
+	// 캡처 목록에 &를 쓰면, 바깥범위에 있는 변수를 참조로 캡처하고,
+	// 캡처 목록에 = 를 쓰면, 바깥범위에 있는 변수를 값으로 캡처한다
+
+	// 매개변수 목록 (), 람다 표ㅕ현식을 사용할떄 넘겨줄 인수
+	// 본문 {}, 함수의 실제 구현 부분이다
+
+	// 한번만 실행되는 한줄짜리 간단한 함수가 있다고 하자, 
+	// 이러한 함수는 클래스의 멤버함수나 전역함수로 만들기보다는 함수가 필요한 곳에 직접 필요한 작업을 정의하면,
+	// 가독성이 향상되고 컴파일러가 최적화할 가능성이 높아진다
 }

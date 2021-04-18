@@ -19,16 +19,19 @@ public:
 	void decltypeKeyword();
 	// null포인터
 	void nullptrKeyword();
+
 	// begin()-end()
 	void begin_end();
-
-
 	// std::array
 	void std_array();
-
 	// std::vector
 	void std_vector();
+	// std_transform
+	void std_transform();
 
 	// foreach
 	void for_each_loop();
+
+	// 람다표현식
+	void lambdafunc();
 };
