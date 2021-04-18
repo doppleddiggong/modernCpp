@@ -40,6 +40,9 @@ int main()
 	/*BinaryTree *binaryTree = new BinaryTree();
 	binaryTree->init();*/
 
-	auto modenCpp = new mordenCpp();
-	modenCpp->init();
+	//auto modenCpp = new mordenCpp();
+	//modenCpp->init();
+
+	auto modern = new funcModern();
+	modern->init();
 }

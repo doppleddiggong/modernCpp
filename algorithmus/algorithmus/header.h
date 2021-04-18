@@ -11,4 +11,6 @@
 #include "BinaryTree.h"
 #include "mordenCpp.h"
 
+#include "funcModern.h"
+
 using namespace std;

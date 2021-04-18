@@ -2,6 +2,7 @@
 #include "header.h"
 #include "mordenCpp.h"
 
+#include <string>
 
 mordenCpp::mordenCpp()
 {
@@ -60,6 +61,16 @@ void mordenCpp::init()
 
 	// push_back_emplace_back의 생성자, 소멸자 호출 비교
 	//push_back_emplace_back();
+
+	int64_t bitNum = 1234567890;
+	string strBitNum = std::to_string(bitNum);
+
+	bool bTrue = true;
+	bool bFalse = false;
+
+	printf("[%lld]{%s}", bitNum, strBitNum.c_str());
+
+	printf("{%s}/{%s}", std::to_string(bTrue).c_str(), std::to_string(bFalse).c_str());
 }
 
 // auto 키워드 sample
